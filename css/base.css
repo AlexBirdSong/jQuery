@@ -291,3 +291,7 @@ select {
 .right {
 	float: right;
 }
+
+.selected{
+	border: 1px solid red;
+}
