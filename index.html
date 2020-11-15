@@ -42,7 +42,8 @@
 <!-- Google Fonts ==================================================
 ================================================== -->
 <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
- <script src="lesson 3.js"></script>
+<script src="jquery-3.5.1.min.js"></script> 
+<script src="lesson 3.js"></script>
 </head>
 <body>
 
@@ -129,7 +130,12 @@
     <header>
       <h1>Introducing Freebix!</h1>
       <p class="infop">- Free, fully <span class="pink">responsive HTML</span> site template made by <a href="http://www.anarieldesign.com/" rel="nofollow"><strong>Anariel Design</strong></a> -</p>
-    </header>
+    <button id="testButt">Test button</button>
+    <form action="">
+      <span> <p>Текст: </p> <p id="writeText"></p></span> 
+      <input id="testInput" type="text">
+    </form>
+  </header>
     <hr class="separator">
   </div>
   <!-- container ends here --> 
@@ -137,7 +143,7 @@
 <!-- infobox ends here --> 
 <!--Latest Photos ==================================================
 ================================================== -->
-<div class="container latest">
+<div id="infoCard" class="container latest">
   <div class="one_third">
     <figure class="shadow"><a href="#" class="thumb"><img src="images/portfolio/a.jpg" alt="alt" /></a>
       <figcaption> <a href="#">
@@ -177,7 +183,7 @@
     <header>
       <h2>Introducing Freebix!</h2>
       <p>- Free, fully <span class="pink">responsive HTML</span> site template made by <a href="http://www.anarieldesign.com/" rel="nofollow"><strong>Anariel Design</strong></a> -</p>
-    </header>
+      </header>
   </div>
   <!-- container ends here -->
   <hr class="separator1">
