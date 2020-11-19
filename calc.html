@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Калькултор на jQuery</title>
+    <style>
+        .controldiv{
+            margin: 10rem;
+            width: 350px;
+            height: 200px;
+            background-color: rgb(204, 196, 196);
+        }
+        h2{
+            text-align: center;
+            color: rgb(40, 112, 112)
+        }
+        .sumResult{
+            color:forestgreen;
+        }
+        #calcForm{
+            padding-left: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="controldiv">
+        <h2> Калькулятор на jQuery</h2>
+        <form  id="calcForm">
+            <label for="numberOne"> Число 1</label>
+            <input type="text" id="numberOne">
+            <br>
+            <label for="numberTwo"> Число 2</label>
+            <input type="text" id="numberTwo">
+            <br>
+            <input type="submit" value="Сумма">
+
+            <p><b>Сумма: <span id="sumResult" class="sumResult"></span></b></p>
+        </form>
+    </div>
+   
+    </div>
+    <script src="jquery-3.5.1.min.js"></script>
+    <script src="calc.js"></script>  
+</body>
+</html>
