@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Уроки по jQuery</title>
+    <style>
+
+.main-wrapper {
+    padding: 30px;
+}
+.box-container {
+    border: 4px solid lightgray;
+    padding: 30px 15px;
+    position: relative;
+    margin-top: 55px;
+
+    &:before {
+        content: '#testBox';
+        padding: 6px 20px;
+        background-color: lightgray;
+        position: absolute;
+        top: -32px;
+        left: -4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.greenBorder {
+    padding: 15px;
+    border: 4px solid green;
+}
+
+.pinkBorder {
+    padding: 15px;
+    border: 4px solid pink;
+}
+
+.blueBorder {
+    padding: 15px;
+    border: 4px solid blue;
+}
+.redBorder {
+    padding: 15px;
+    border: 4px solid red;
+}
+    </style>
+</head>
+<body>
+
+    <section class="main-wrapper">
+        <h1 id="top-header">jQuery методы - работа с разметкой</h1>
+
+        <h2>Добавление текста и разметки на страницу</h2>
+        <div id="testBox" class="box-container"></div>
+
+        <p id="textNoWrap">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Maiores non placeat iste possimus corporis quos minima 
+            veniam, quidem aspernatur similique qui unde 
+            accusantium fugiat ducimus. Quos cumque nam 
+            perspiciatis laudantium?
+        </p>
+
+        <div class="blueBorder">
+            <div class="greenBorder">
+                <p id="textInWrap">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Maiores non placeat iste possimus corporis quos minima
+                    veniam, quidem aspernatur similique qui unde
+                    accusantium fugiat ducimus. Quos cumque nam
+                    perspiciatis laudantium?
+                </p>
+            </div>
+        </div>
+
+        <h4>.empty()</h4>
+
+        <div id="toDeleteEmpty" class="greenBorder">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Maiores non placeat iste possimus corporis quos minima
+            veniam, quidem aspernatur similique qui unde
+            accusantium fugiat ducimus. Quos cumque nam
+            perspiciatis laudantium?
+        </div>
+
+        <h4>.remove()</h4>
+        
+        <div id="toDeleteRemove" class="redBorder">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Maiores non placeat iste possimus corporis quos minima
+            veniam, quidem aspernatur similique qui unde
+            accusantium fugiat ducimus. Quos cumque nam
+            perspiciatis laudantium?
+        </div>
+
+
+    </section>
+
+   
+    <script src="jquery-3.5.1.min.js"></script>
+    <script src="lesson 7.js"></script>  
+</body>
+</html>
