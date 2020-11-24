@@ -27,4 +27,25 @@ $(document).ready(function(){
     $('#testBox').before('Текст в начало ');
 
     $('#testBox').after('Текст в конец ');
+
+    $('#textNoWrap').wrap('<div class="pinkBorder"></div>');
+
+    // $('#textInWrap').unwrap();
+
+    $('#textInWrap').unwrap('.greenBorder');
+
+    $('#toDeleteEmpty').empty();
+
+    $('#toDeleteRemove').remove();
+
+    $('#testBox').on('click',function(){
+        
+        let $cloneElement = $(this).clone();
+
+        $cloneElement.addClass('greenBorder');
+
+        $cloneElement.text('Абсолютной другой новый текст');
+
+        $('#testBox').after($cloneElement);
+    });   
 });
