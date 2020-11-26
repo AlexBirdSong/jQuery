@@ -10,7 +10,7 @@
     <style>
 
 .main-wrapper {
-    padding: 30px; 
+    padding: 20px; 
 }
 .calcContainer{
     border: 7px solid rgb(230, 228, 228);
@@ -37,42 +37,82 @@
 .colorWheat{
     background-color: Wheat;
 }                   
-                   
+.three {
+  padding: 0px 100px 45px;
+  text-align: center;
+} 
+.three h1 {
+    font-family: 'Merriweather', serif;
+    position: relative;
+    font-size: 5em;
+    font-weight: normal;
+    padding: 10px 40px;
+    display: inline-block;
+    margin: 0;
+    line-height: 1;
+}
+                 
 #autoForm{
     padding: 15px;
-}                 
-                   
+}  
+#autoForm h2{
+    text-align: center;
+}  
+.model-summary{
+    font-weight: 300;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    font-size: 2em;
+}             
+.model-price{
+    color: forestgreen;
+    font-weight: bold;
+}   
+.model-specs{
+    font-size: 0.5em;
+}           
     </style>
 </head>
 <body>
 
     <section class="main-wrapper">
-      <div id="imgHolder" class="imgHolder"></div>
-        <img src="black.png" alt="Автомобиль">
-
-        <div class="model-summary">
-            <div class="model-name" >Lada Vesta</div>
-            <div class="model-specs" id="modelSpecs">1.6 - AT Comfort</div>
-            <div class="model-price" id="modelPrice"></div>
-            <div class="model-price" id="modelPriceUSD"></div>
-            <div class="btn btn-primary">Заказать</div>
+            <div class="three"><h1>MITSUBISHI LANCER X</h1></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-8">
+                        <div id="imgHolder" class="imgHolder">
+                                <img src="mitsusilver.png" alt="Автомобиль">
+                        </div>
+                </div>
+                <div class="col-4">
+                        <div class="model-summary">
+                                <div class="model-name" >MITSUBISHI LANCER X</div>
+                                <div class="model-specs" id="modelSpecs">1.5 л (109 л.с.), Ручная, 5 ступенией (5 МТ), Invite.</div>
+                                <div class="model-price" id="modelPrice">Цена: 8270$</div>
+                                <div class="model-price" id="modelPriceUSD"></div>
+                                <div class="btn btn-primary" id="submitBtn">Заказать</div>
+                        </div>
+                </div>
+                
+                
+            </div>
         </div>
+
         <div class="container-fluid calcContainer">
             <form id="autoForm">
                 <h2>Настрой авто для себя</h2>
 
                 <div class="row">
 
-                    <div class="col-3">
+                    <div class="col-2">
                         <h4>Двигатель</h4>
                         <div class="form-block">
-                            <input type="radio" name="engine" id="engine1400" value="624900" checked>
-                            <label for="engine1400">1.4 л (100 л.с.)</label>
+                            <input type="radio" name="engine" id="engine1400" value="8270" checked>
+                            <label for="engine1500">1.5 л (109 л.с.)</label>
                         </div>
 
                         <div class="form-block">
-                            <input type="radio" name="engine" id="engine1600" value="749900">
-                            <label for="engine1400">1.6 л (123 л.с.)</label>
+                            <input type="radio" name="engine" id="engine1600" value="9925">
+                            <label for="engine2000">2.0 л (150 л.с.)</label>
                         </div>
                     </div>
 
@@ -81,45 +121,50 @@
                         <h4>Коробка передач</h4>
                         <div class="form-block">
                             <input type="radio" name="transmission" id="transmission6MT" value="0" checked>
-                            <label for="transmission6MT">Ручная, 6 ступенией (6 МТ)</label>
+                            <label for="transmission6MT">Ручная, 5 ступенией (5 МТ)</label>
                         </div>
 
                         <div class="form-block">
-                            <input type="radio" name="transmission" id="transmission6AT" value="125000"  >
-                            <label for="transmission6AT">Автомат, 6 ступенией (6 АТ)</label>
+                            <input type="radio" name="transmission" id="transmission6AT" value="1654"  >
+                            <label for="transmission6AT">Автомат, 5 ступенией (5 АТ)</label>
+                        </div>
+                    </div>
+
+                    <div class="col-4">
+                        <h4>Пакет (дополнительные опции)</h4>
+                        <div class="form-block">
+                            <input type="radio" name="package" id="packageActive" value="0" checked>
+                            <label for="packageActive">Invite</label>
+                        </div>
+
+                        <div class="form-block">
+                            <input type="radio" name="package" id="packageActivePlus" value="1125" >
+                            <label for="packageActivePlus">Invite Plus(кондиционер)</label>
+                        </div>
+
+                        <div class="form-block">
+                            <input type="radio" name="package" id="packageComfort" value="1720" >
+                            <label for="packageComfort">Intense(климатконтроль)</label>
                         </div>
                     </div>
 
                     <div class="col-3">
-                        <h4>Пакет (дополнительные опции)</h4>
-                        <div class="form-block">
-                            <input type="radio" name="package" id="packageActive" value="0" checked>
-                            <label for="packageActive">Active</label>
-                        </div>
+                            <h4>Цвет</h4>
+                            <div class="form-block">
+                                <div id="colorSelector" class="row colorsSelector">
+                                    <div class="colorItem colorBlack" data-img-path="mitsublack.png"> </div>
+                                    <div class="colorItem colorBrown" data-img-path="mitsured.png"> </div>
+                                    <div class="colorItem colorDodgerblue" data-img-path="mitsublue.png"> </div>
+                                    <div class="colorItem colorSilver" data-img-path="mitsusilver.png"> </div>
+                                    <div class="colorItem colorWheat" data-img-path="mitsuwhite.png"> </div>
+                                </div>
+                            </div>   
 
-                        <div class="form-block">
-                            <input type="radio" name="package" id="packageActivePlus" value="85000" checked>
-                            <label for="packageActivePlus">Active Plus(кондиционер)</label>
-                        </div>
-
-                        <div class="form-block">
-                            <input type="radio" name="package" id="packageComfort" value="130000" checked>
-                            <label for="packageComfort">Comfort(климатконтроль)</label>
-                        </div>
                     </div>
                 </div>
 
 
-                <h4>Цвет</h4>
-                <div class="form-block">
-                    <div id="colorSelector" class="row colorsSelector">
-                        <div class="colorItem colorBlack" data-img-path="Black.png"> </div>
-                        <div class="colorItem colorBrown" data-img-path="Brown.png"> </div>
-                        <div class="colorItem colorDodgerblue" data-img-path="Dodgerblue.png"> </div>
-                        <div class="colorItem colorSilver" data-img-path="Silver.png"> </div>
-                        <div class="colorItem colorWheat" data-img-path="Wheat.png"> </div>
-                    </div>
-                </div>    
+ 
             </form>
         </div>
 
